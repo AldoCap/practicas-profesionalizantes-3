@@ -1,0 +1,124 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.box_frame {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.claculator {
+    width: 300px;
+    height: 300px;
+    padding: 20px;
+    margin: 20px;
+    background-color: red;
+}
+
+.keyboard {
+    background-color: blue;
+    align-items: center;
+    justify-content: center;
+    width: 300px;
+    height: 250px;
+    /* display: flexbox;*/
+    margin: 1px;
+}
+
+.btn {
+    width: 60px;
+    padding: 3px;
+    margin: 3px;
+    display: flexbox;
+    border-radius: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    border: 1.5px solid black;
+}
+
+.btnLarge {
+    width: 80px;
+    padding: 3px;
+    margin: 3px;
+    border-radius: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    border: 1.5px solid black;
+    
+}
+.btnEqual {
+    width: 120px;
+    padding: 3px;
+    margin: 3px;
+    border-radius: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    border: 1.5px solid black;
+    
+}
+.btnClear{
+    width: 120px;
+    padding: 3px;
+    margin: 3px;
+    border-radius: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    border: 1.5px solid black;
+}
+#display {
+    width: 250px;
+    background-color: black;
+    border: 1px solid black;
+    text-align: right;
+    height: 50px;
+}
+.btnAdd{
+    width: 120px;
+    padding: 3px;
+    margin: 3px;
+    border-radius: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    border: 1.5px solid black;
+}
+
+.btnDiv{
+    width: 120px;
+    padding: 3px;
+    margin: 3px;
+    border-radius: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    border: 1.5px solid black;
+}
+
+.btnLarge:hover{
+
+    background-color:darkgoldenrod;
+}
+.btn:hover{
+    background-color:aqua; 
+}
+.btnClear:hover{
+    background-color: red;
+}
+.btnEqual:hover{
+    background-color: red;
+}
+.btnAdd:hover{
+    background-color: yellow;
+}
+
+.btnSub:hover{
+    background-color: yellow;
+}
+.btnMul:hover{
+    background-color: yellow;
+}
+
+.btnDiv:hover{
+    background-color: yellow;
+}
