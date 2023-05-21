@@ -1,0 +1,44 @@
+html{
+    position: relative;
+    
+}
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: rgb(223, 68, 68);
+    width: 165px;
+    height: 200px;
+
+}
+.button{
+    
+    padding: 10px;
+    margin: 2px;
+    
+}
+.input{
+    position: absolute;
+    width: 130px;
+    left: 10px;
+
+}
+.btnCero{
+
+    padding: 7px;
+    margin: 2px;
+    width: 32px;
+}
+
+.btnEqual{     
+    padding: 7px;
+    margin: 2px;
+    width: 60px;
+}
+
+.btnSum
+{
+    padding: 7px;
+    margin: 2px;
+    width: 32px;
+}
