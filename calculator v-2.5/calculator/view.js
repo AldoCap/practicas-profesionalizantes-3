@@ -1,9 +1,14 @@
-class view {
-    constructor() {
+class calculatorView 
+{
+    constructor() 
+    {
+    
+        this.container = document.createElement('div');
+
         this.display = document.createElement('input');
-        //this.display.type = 'text';
-        //this.display.setAttribute('disabled','');
-        //this.display.value = '';
+        this.display.type = 'text'; 
+        this.display.setAttribute('disabled', '');
+        this.display.value = '';  
         this.display.classList.add('displayResult');
 
         this.button0 = document.createElement('button');
@@ -70,8 +75,6 @@ class view {
         this.buttonCalculate.innerText = '=';
         this.buttonCalculate.classList.add('calculateButton');
 
-        //Container
-        this.container = document.createElement('div');
         this.container.appendChild(this.display);
         this.container.appendChild(this.button0);
         this.container.appendChild(this.button1);
@@ -89,11 +92,7 @@ class view {
         this.container.appendChild(this.buttonPlus);
         this.container.appendChild(this.buttonClean);
         this.container.appendChild(this.buttonCalculate);
-    }
 
-    style() {
-        this.a = this.container.getElementsByClassName("btn");
-        this.a.set
     }
-
 }
+export{ calculatorView };

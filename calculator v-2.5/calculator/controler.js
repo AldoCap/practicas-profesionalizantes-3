@@ -1,7 +1,8 @@
-class controller {
+class calculatorController {
 
-    constructor(viewReference, modelReference) {
-        this.innerView = viewReference;
+    constructor(innerView, modelReference) 
+    {
+        this.innerView = innerView;
         this.innerModel = modelReference;
 
         this.innerView.button0.addEventListener('click', () => { this.onButton0Click() });
@@ -22,64 +23,82 @@ class controller {
         this.innerView.buttonCalculate.addEventListener('click', () => { this.onButtonCalculateClick() });
     }
 
-    onButton0Click() {
+    onButton0Click() 
+    {
         this.innerView.display.value += '0';
     }
 
-    onButton1Click() {
+    onButton1Click() 
+    {
         this.innerView.display.value += '1';
     }
 
-    onButton2Click() {
+    onButton2Click() 
+    {
         this.innerView.display.value += '2';
     }
 
-    onButton3Click() {
+    onButton3Click() 
+    {
         this.innerView.display.value += '3';
     }
-    onButton4Click() {
+    onButton4Click() 
+    {
         this.innerView.display.value += '4';
     }
-    onButton5Click() {
+    onButton5Click() 
+    {
         this.innerView.display.value += '5';
     }
-    onButton6Click() {
+    onButton6Click() 
+    {
         this.innerView.display.value += '6';
     }
 
-    onButton7Click() {
+    onButton7Click() 
+    {
         this.innerView.display.value += '7';
     }
 
-    onButton8Click() {
+    onButton8Click() 
+    {
         this.innerView.display.value += '8';
     }
 
-    onButton9Click() {
+    onButton9Click() 
+    {
         this.innerView.display.value += '9';
     }
 
-    onButtonSubClick() {
+    onButtonSubClick() 
+    {
         this.innerView.display.value += '-';
     }
 
-    onButtonMulClick() {
+    onButtonMulClick() 
+    {
         this.innerView.display.value += '*';
     }
 
-    onButtonDivClick() {
+    onButtonDivClick() 
+    {
         this.innerView.display.value += '/';
     }
 
-    onButtoncleanClick() {
+    onButtoncleanClick() 
+    {
         this.innerView.display.value = '';
     }
 
-    onButtonPlusClick() {
+    onButtonPlusClick() 
+    {
         this.innerView.display.value += '+';
     }
 
-    onButtonCalculateClick() {
+    onButtonCalculateClick() 
+    {
         this.innerView.display.value = this.innerModel.evaluateExpression(this.innerView.display.value);
     }
 }
+
+export {calculatorController}; 

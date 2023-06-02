@@ -1,9 +1,13 @@
-class model {
-    constructor() {
+class calculatorModel 
+{
+    constructor() 
+    {
 
     }
 
-    evaluateExpression(expr) {
+    evaluateExpression(expr) 
+    {
         return eval(expr);
     }
 }
+export { calculatorModel }; 
