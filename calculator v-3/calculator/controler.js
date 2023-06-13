@@ -97,7 +97,7 @@ class calculatorController {
 
     onButtonCalculateClick() 
     {
-        //this.viewReference.display.value = this.innerModel.evaluateExpression(this.viewReference.display.value);
+        this.viewReference.display.value = this.innerModel.evaluateExpression(this.viewReference.display.value);
         this.modelReference.calculateExpression(this.viewReference.display.value).then( response => 
 		{
 			this.viewReference.display.value = response.message;
