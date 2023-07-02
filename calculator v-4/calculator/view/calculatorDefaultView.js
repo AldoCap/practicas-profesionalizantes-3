@@ -2,6 +2,7 @@ class calculatorDefaultView extends HTMLElement
 {
     constructor() 
     {
+
         super();
         this.container = document.createElement('div');
 
@@ -75,23 +76,23 @@ class calculatorDefaultView extends HTMLElement
         this.buttonCalculate.innerText = '=';
         this.buttonCalculate.classList.add('calculateButton');
 
-        this.container.appendChild(this.display);
-        this.container.appendChild(this.button0);
-        this.container.appendChild(this.button1);
-        this.container.appendChild(this.button2);
-        this.container.appendChild(this.button3);
-        this.container.appendChild(this.button4);
-        this.container.appendChild(this.button5);
-        this.container.appendChild(this.button6);
-        this.container.appendChild(this.button7);
-        this.container.appendChild(this.button8);
-        this.container.appendChild(this.button9);
-        this.container.appendChild(this.buttonDiv);
-        this.container.appendChild(this.buttonMul);
-        this.container.appendChild(this.buttonSub);
-        this.container.appendChild(this.buttonPlus);
-        this.container.appendChild(this.buttonClean);
-        this.container.appendChild(this.buttonCalculate);
+        this.appendChild(this.display);
+        this.appendChild(this.button0);
+        this.appendChild(this.button1);
+        this.appendChild(this.button2);
+        this.appendChild(this.button3);
+        this.appendChild(this.button4);
+        this.appendChild(this.button5);
+        this.appendChild(this.button6);
+        this.appendChild(this.button7);
+        this.appendChild(this.button8);
+        this.appendChild(this.button9);
+        this.appendChild(this.buttonDiv);
+        this.appendChild(this.buttonMul);
+        this.appendChild(this.buttonSub);
+        this.appendChild(this.buttonPlus);
+        this.appendChild(this.buttonClean);
+        this.appendChild(this.buttonCalculate);
 
     }
 }

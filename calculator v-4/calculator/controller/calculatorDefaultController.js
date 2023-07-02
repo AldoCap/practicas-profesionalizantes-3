@@ -25,7 +25,7 @@ class calculatorDefaultController {
         this.viewReference.buttonPlus.onclick = () => this.onButtonPlusClick();
         this.viewReference.buttonCalculate.onclick = () => this.onButtonCalculateClick();
     }
-
+    
     disable()
     {    
         this.viewReference.button0.onclick = null;
@@ -45,7 +45,7 @@ class calculatorDefaultController {
         this.viewReference.buttonPlus.onclick = null;
         this.viewReference.buttonCalculate.onclick = null;
     }
-
+    
     onButton0Click() 
     {
         this.viewReference.display.value += '0';
@@ -119,12 +119,11 @@ class calculatorDefaultController {
     }
 
     onButtonCalculateClick() 
-    {
-        //this.viewReference.display.value = this.innerModel.evaluateExpression(this.viewReference.display.value);
-        //this.modelReference.calculateExpression(this.viewReference.display.value).then( response =>  
-		//{
-		//	this.viewReference.display.value = response.message;
-		//});
+    {   
+        this.modelReference.calculateExpression(this.viewReference.display.value).then( response => 
+            {
+                this.viewReference.display.value = response.message;
+            });
     }
 }
 

@@ -1,20 +1,20 @@
 import { calculatorDefaultView } from './view/calculatorDefaultView.js';
-import { calculatorDefaultController } from './controller/calculatorDefaultControler.js';
-import { calculatorDefaultModel } from './model/calculatorDefaultModel.js';
+import { calculatorDefaultController } from './controller/calculatorDefaultController.js';
+import { calculatorDefaultModel } from './model/calculatorDefaultModel.js'; 
 
 class HTMLCalculator extends HTMLElement
 {
 	constructor( modelConstructor = calculatorDefaultModel )
 	{
 		super();
-
+		
 		this.attachShadow({ mode: "open" });
 
 		this.innerView = new calculatorDefaultView();
 		this.innerModel = new modelConstructor();
 		this.innerController = new calculatorDefaultController(this.innerView, this.innerModel);
 
-		/*
+		
 		let style = document.createElement('style');
 		style.innerText =
 		`button
@@ -27,7 +27,7 @@ class HTMLCalculator extends HTMLElement
 
 		this.shadowRoot.appendChild(style);
 		this.shadowRoot.appendChild(this.innerView);
-		*/
+		
 	}
 
 	connectedCallback()

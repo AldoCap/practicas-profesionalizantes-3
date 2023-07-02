@@ -1,24 +1,23 @@
-import { calculatorView } from '../calculator/view.js';
-import { calculatorModel } from '../calculator/model.js'; 
-import { calculatorController } from '../calculator/controler.js'; 
+import { TicketView } from '../ticket/view.js'
+import { TicketModel } from '../ticket/model.js'; 
+import { TicketController } from '../ticket/controler.js'; 
 
-class calculator 
+class ticket 
 {
     constructor() 
     {
-        this.innerView = new calculatorView(); 
-        this.innerModel = new calculatorModel();
-        this.innerController = new calculatorController(this.innerView, this.innerModel);
+        this.innerView = new TicketView(); 
+        this.innerModel = new TicketModel();
+        this.innerController = new TicketController(this.innerView, this.innerModel);
         
     }
 }; 
 
 function main() 
 {
-    let calculatorInstance = new calculator();
+    let ticketInstance = new ticket();
 
-    document.body.appendChild(calculatorInstance.innerView.container);
+    document.body.appendChild(ticketInstance.innerView.conteiner);
 };
 
-//window.addEventListener('load', main);
 window.onload = main;

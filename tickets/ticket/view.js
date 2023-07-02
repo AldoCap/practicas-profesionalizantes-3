@@ -1,98 +1,89 @@
-class calculatorView 
+class TicketView extends HTMLElement
 {
-    constructor() 
+    constructor()
     {
-    
-        this.container = document.createElement('div');
+        super();
+        
+        this.conteiner = document.createElement('div');
+        this.conteiner.classList.add('conteiner')
 
-        this.display = document.createElement('input');
-        this.display.type = 'text'; 
-        this.display.setAttribute('disabled', '');
-        this.display.value = '';  
-        this.display.classList.add('displayResult');
+        
+        this.typeOptions = document.createElement('select')
+        this.tOption1 = document.createElement('option')
+        this.tOption1.innerText = 'Error'
 
-        this.button0 = document.createElement('button');
-        this.button0.innerText = '0';
-        this.button0.classList.add('btn', 'button0');
+        this.tOption2 = document.createElement('option')
+        this.tOption2.innerText = 'New requirement'
+        
+        this.labelType = document.createElement('label')
+        this.labelType.innerText = 'Type'
 
-        this.button1 = document.createElement('button');
-        this.button1.innerText = '1';
-        this.button1.classList.add('btn', 'button1');
+        
+        this.PriorityOptions = document.createElement('select')
+        this.pOption1 = document.createElement('option')
+        this.pOption1.innerText = 'Urgent'
 
-        this.button2 = document.createElement('button');
-        this.button2.innerText = '2';
-        this.button2.classList.add('btn', 'button2');
+        this.pOption2 = document.createElement('option')
+        this.pOption2.innerText = 'Medium'
 
-        this.button3 = document.createElement('button');
-        this.button3.innerText = '3';
-        this.button3.classList.add('btn', 'button3');
+        this.pOption3 = document.createElement('option')
+        this.pOption3.innerText = 'Low'
 
-        this.button4 = document.createElement('button');
-        this.button4.innerText = '4';
-        this.button4.classList.add('btn', 'button4');
+        this.labelPriority = document.createElement('label')
+        this.labelPriority.innerText = 'Priority'
 
-        this.button5 = document.createElement('button');
-        this.button5.innerText = '5';
-        this.button5.classList.add('btn', 'button5');
+        
+        this.descriptionBox = document.createElement('textarea')
+        this.descriptionBox.placeholder = 'Describe...'
 
-        this.button6 = document.createElement('button');
-        this.button6.innerText = '6';
-        this.button6.classList.add('btn', 'button6');
+        this.labelDescription = document.createElement('label')
+        this.labelDescription.innerText = 'Description'
 
-        this.button7 = document.createElement('button');
-        this.button7.innerText = '7';
-        this.button7.classList.add('btn', 'button7');
+        
+        this.Button = document.createElement('button')
+        this.Button.innerText = 'Send'
 
-        this.button8 = document.createElement('button');
-        this.button8.innerText = '8';
-        this.button8.classList.add('btn', 'button8');
+        
+        this.listTickets = document.createElement('div');
+        this.listTickets.classList.add('conteinerTickets')
 
-        this.button9 = document.createElement('button');
-        this.button9.innerText = '9';
-        this.button9.classList.add('btn', 'button9');
+        this.tableListTickets = document.createElement('table');
 
-        this.buttonPlus = document.createElement('button');
-        this.buttonPlus.innerText = '+';
-        this.buttonPlus.classList.add('btn', 'buttonPlus');
+        this.row1 = document.createElement('tr');
+        this.tableHearder1 = document.createElement('th');
+        this.tableHearder1.innerText = 'Type'
+        this.tableHearder2 = document.createElement('th');
+        this.tableHearder2.innerText = 'Description'
+        this.tableHearder3 = document.createElement('th');
+        this.tableHearder3.innerText = 'Priority'
 
-        this.buttonClean = document.createElement('button');
-        this.buttonClean.innerText = 'C';
-        this.buttonClean.classList.add('btn', 'buttonClean');
 
-        this.buttonDiv = document.createElement('button');
-        this.buttonDiv.innerText = '/';
-        this.buttonDiv.classList.add('btn', 'buttonDiv');
+        this.appendChild(this.conteiner)
+        this.conteiner.appendChild(this.labelType)
+        this.conteiner.appendChild(this.typeOptions)
+        this.typeOptions.appendChild(this.tOption1)
+        this.typeOptions.appendChild(this.tOption2)
 
-        this.buttonMul = document.createElement('button');
-        this.buttonMul.innerText = '*';
-        this.buttonMul.classList.add('btn', 'buttonMul');
+        this.conteiner.appendChild(this.labelPriority)
+        this.conteiner.appendChild(this.PriorityOptions)
+        this.PriorityOptions.appendChild(this.pOption1)
+        this.PriorityOptions.appendChild(this.pOption2)
+        this.PriorityOptions.appendChild(this.pOption3)
 
-        this.buttonSub = document.createElement('button');
-        this.buttonSub.innerText = '-';
-        this.buttonSub.classList.add('btn', 'buttonSub');
+        this.conteiner.appendChild(this.labelDescription)
+        this.conteiner.appendChild(this.descriptionBox)
 
-        this.buttonCalculate = document.createElement('button');
-        this.buttonCalculate.innerText = '=';
-        this.buttonCalculate.classList.add('calculateButton');
+        this.conteiner.appendChild(this.Button)
 
-        this.container.appendChild(this.display);
-        this.container.appendChild(this.button0);
-        this.container.appendChild(this.button1);
-        this.container.appendChild(this.button2);
-        this.container.appendChild(this.button3);
-        this.container.appendChild(this.button4);
-        this.container.appendChild(this.button5);
-        this.container.appendChild(this.button6);
-        this.container.appendChild(this.button7);
-        this.container.appendChild(this.button8);
-        this.container.appendChild(this.button9);
-        this.container.appendChild(this.buttonDiv);
-        this.container.appendChild(this.buttonMul);
-        this.container.appendChild(this.buttonSub);
-        this.container.appendChild(this.buttonPlus);
-        this.container.appendChild(this.buttonClean);
-        this.container.appendChild(this.buttonCalculate);
+        this.conteiner.appendChild(this.listTickets)
+        this.listTickets.appendChild(this.tableListTickets)
 
+        this.tableListTickets.appendChild(this.row1)
+        this.row1.appendChild(this.tableHearder1)
+        this.row1.appendChild(this.tableHearder2)
+        this.row1.appendChild(this.tableHearder3)
     }
 }
-export{ calculatorView };
+
+customElements.define('x-view', TicketView);
+export { TicketView }

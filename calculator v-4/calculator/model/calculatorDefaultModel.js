@@ -7,7 +7,7 @@ class calculatorDefaultModel
 
 	calculateExpression( mathExpression )
 	{
-		return Promise.resolve({message: eval(mathExpression)});;
+		return Promise.resolve({message: eval(mathExpression)});
 	}
 }
 

@@ -1,16 +1,12 @@
 //CORS Server API Example
 
 const http = require('http');
-
 const hostname = '127.0.0.1';
 const port = '1337';
 
 class calculatorModel
 {
-	constructor()
-	{
-
-	}
+	constructor(){}
 
 	calculateExpression( mathExpression )
 	{

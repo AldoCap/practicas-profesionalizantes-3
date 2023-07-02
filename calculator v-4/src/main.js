@@ -6,7 +6,7 @@ function main()
 {
 
     alert('Starting application...');
-    let calculator = new HTMLCalculator();//calculatorServerModel
+    let calculator = new HTMLCalculator(calculatorServerModel);//calculatorServerModel
 	document.body.appendChild(calculator);
 };
 
