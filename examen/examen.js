@@ -82,6 +82,10 @@ class ButtonStateView extends HTMLElement
 		this.innerController = new ButtonStateController(this.innerModel, this);
 		
 		this.customButton = document.createElement('button');
+<<<<<<< HEAD
+=======
+        this.customButton.classList.add('input')
+>>>>>>> 5e128e98d396f412d18ea2a35120001cb4728a5b
 		this.appendChild(this.customButton);
 	}
     
